@@ -23,7 +23,7 @@ let job2 = "teacher";
 
 console.log(myFirstJob);
 console.log(myCurrentJob);
-*/
+
 
 let javascriptIsFun = false;
 console.log(javascriptIsFun);
@@ -45,3 +45,16 @@ console.log(year);
 console.log(typeof year);
 
 console.log(typeof null);
+*/
+
+let age = 30;
+age = 31;
+console.log(age);
+
+const birth = 1999; //const can not be modified
+
+var job = "programmer";
+job = "teacher";
+
+lastName = "chavan";
+console.log(lastName);
