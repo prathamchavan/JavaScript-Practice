@@ -58,7 +58,7 @@ job = "teacher";
 
 lastName = "chavan";
 console.log(lastName);
-*/
+
 
 //math operators
 const now = 2037;
@@ -87,8 +87,51 @@ console.log(x);
 
 //comparison operators
 console.log(ageJonas > ageSearch); // >, <, >=, <=
+
 console.log(ageSearch >= 18);
 
 const isFullAge = ageSearch >= 18;
 
 console.log(now - 1991 > now - 2018);
+
+
+
+//operator precedence
+console.log(3 + 4 * 5); // 3 + 20
+// Expected output: 23
+
+console.log(4 * 3 ** 2); // 4 * 9
+// Expected output: 36
+
+let a;
+let b;
+
+console.log((a = b = 5));
+// Expected output: 5
+Operator precedence will be handled recursively. For example, consider this expression:
+
+JS
+Copy to Clipboard
+1 + 2 ** 3 * 4 / 5 >> 6
+First, we group operators with different precedence by decreasing levels of precedence.
+
+The ** operator has the highest precedence, so it's grouped first.
+Looking around the ** expression, it has * on the right and + on the left. * has higher precedence, so it's grouped first. * and / have the same precedence, so we group them together for now.
+Looking around the / expression grouped in 2, because + has higher precedence than >>, the former is grouped.
+JS
+Copy to Clipboard
+   (1 + ( (2 ** 3) * 4 / 5) ) >> 6
+// │    │ └─ 1. ─┘        │ │
+// │    └────── 2. ───────┘ │
+// └────────── 3. ──────────┘
+Within the group, because they are both left-associative, the left operand would be grouped.
+
+JS
+Copy to Clipboard
+   (1 + ( ( (2 ** 3) * 4 ) / 5) ) >> 6
+// │    │ │ └─ 1. ─┘     │    │ │
+// │    └─│─────── 2. ───│────┘ │
+// └──────│───── 3. ─────│──────┘
+//        └───── 4. ─────┘
+
+*/
