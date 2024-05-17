@@ -135,15 +135,23 @@ Copy to Clipboard
 //        └───── 4. ─────┘
 
 
-
-const massMark = 78;
-const heightMark = 1.69;
-const massJohn = 92;
-const heightJohn = 1.95;
-
-const BMIMark = massMark / heightMark ** 2;
-const BMIJohn = massJohn / (heightJohn * heightJohn);
-const markHigherBMI = BMIMark > BMIJohn;
-
-console.log(BMIMark, BMIJohn, markHigherBMI);
 */
+
+const markHeight = 1.69;
+const markMass = 78;
+
+const johnHeight = 1.88;
+const johnmass = 95;
+
+markBMI = markMass / markHeight ** 2;
+johnBMI = (johnmass / johnHeight) * johnHeight;
+
+markHigherBMI = Boolean(markBMI > johnBMI);
+
+console.log(markBMI, johnBMI, markHigherBMI);
+
+if (markBMI > johnBMI) {
+  console.log("Mark's BMI is higher than John's!");
+} else {
+  console.log("John's BMI is higher than Mark's!");
+}
