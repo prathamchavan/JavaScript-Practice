@@ -250,6 +250,7 @@ the function you created before
 
 */
 
+/*
 const calcTip = function (bills) {
   if (bills >= 50 && bills <= 300) {
     return bills * (15 / 100);
@@ -266,3 +267,44 @@ const bills = [125, 555, 44];
 const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(bills, tips, total);
+*/
+
+/* */
+//Learning about objects
+
+// object literal / object initializer
+
+//creating empty JS object using {} and add four properties
+
+// const person = {}; //create oject
+
+// person.firstName = "Prathamesh"; //adding properties
+// person.lastName = "Chavan";
+// person.age = 50;
+// person.eyecolor = "brown";
+
+// console.log(person);
+
+//creating an empty object using new object() and add 4 properties
+
+// const person = new Object(); //creating object
+
+// person.firstName = "Prathamesh"; //adding properties
+// person.lastName = "Chavan";
+// person.age = 50;
+// person.eyecolor = "brown";
+
+// console.log(person);
+
+//////////////////// Object Constructor Functions ////////////////////
+
+function person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+const myFather = new person("Pravin", "Chavan", 52, "Brown");
+console.log(myFather["firstName"]);
+console.log(myFather.firstName);
