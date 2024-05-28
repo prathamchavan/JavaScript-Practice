@@ -328,6 +328,9 @@ tall.
 
 */
 
+/*
+
+
 const John = {};
 John.firstName = "John";
 John.lastName = "Smith";
@@ -357,4 +360,16 @@ if (MarkBMI > JohnBMI) {
   console.log(
     "Mark's BMI (" + JohnBMI + ") is higher than Mark's (" + MarkBMI + ")!"
   );
+}
+
+
+*/
+
+////////////////////// if-else block ///////////////////
+
+let number = 10;
+if (number > 0) {
+  console.log("It is positive number");
+} else {
+  console.log("It is negative number");
 }
