@@ -365,6 +365,7 @@ if (MarkBMI > JohnBMI) {
 
 */
 
+/*
 ////////////////////// if-else block ///////////////////
 
 let number = 10;
@@ -372,4 +373,12 @@ if (number > 0) {
   console.log("It is positive number");
 } else {
   console.log("It is negative number");
+}
+
+//
+
+*/
+
+for (let i = 0; i <= 10; i++) {
+  console.log("Lifting weights repetition " + i);
 }
