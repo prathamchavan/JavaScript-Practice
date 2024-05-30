@@ -379,6 +379,61 @@ if (number > 0) {
 
 */
 
+/*
+/////////////////////// looping ///////////////////
 for (let i = 0; i <= 10; i++) {
   console.log("Lifting weights repetition " + i);
+
+
+  /// while is also used for looping
+
+  */
+
+//////////
+
+const prathamArray = [
+  "Prathamesh",
+  "Chavan",
+  2037 - 1991,
+  "teacher",
+  ["Arya", "Akshay", "Akash"],
+  true,
+];
+
+const types = [];
+
+for (let i = 0; i < prathamArray.length; i++) {
+  console.log(prathamArray[i], typeof prathamArray[i]);
+
+  //filling types array
+  // types[i] = typeof prathamArray[i];
+
+  types.push(typeof prathamArray[i]);
+}
+
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2024 - years[i]);
+}
+
+console.log(ages);
+
+//continue and break
+
+console.log("---ONLY STRING---");
+for (let i = 0; i < prathamArray.length; i++) {
+  if (typeof prathamArray[i] !== "string") continue;
+
+  console.log(prathamArray[i], typeof prathamArray[i]);
+}
+
+console.log("---ONLY STRING---");
+for (let i = 0; i < prathamArray.length; i++) {
+  if (typeof prathamArray[i] === "number") break;
+
+  console.log(prathamArray[i], typeof prathamArray[i]);
 }
