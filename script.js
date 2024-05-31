@@ -391,6 +391,8 @@ for (let i = 0; i <= 10; i++) {
 
 //////////
 
+/*
+
 const prathamArray = [
   "Prathamesh",
   "Chavan",
@@ -437,3 +439,41 @@ for (let i = 0; i < prathamArray.length; i++) {
 
   console.log(prathamArray[i], typeof prathamArray[i]);
 }
+*/
+
+////////// coding challenge //////////
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+const calcTip = function (bill) {
+  if (bill >= 50 && bill <= 300) {
+    return bill * 0.15; // 15% tip
+  } else {
+    return bill * 0.2; // 20% tip
+  }
+};
+
+// Ensure the loop iterates correctly over the `bills` array
+for (let i = 0; i < bills.length; i++) {
+  const tip = calcTip(bills[i]);
+  tips.push(tip);
+  totals.push(tip + bills[i]);
+}
+
+console.log("Bills: ", bills);
+console.log("Tips: ", tips);
+console.log("Totals: ", totals);
+
+const calcAverage = function (arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i]; // Use the shorthand for summation
+  }
+  return sum / arr.length;
+};
+
+console.log("Average of [2, 3, 7]:", calcAverage([2, 3, 7]));
+console.log("Average Total:", calcAverage(totals));
+console.log("Average Tip:", calcAverage(tips));
