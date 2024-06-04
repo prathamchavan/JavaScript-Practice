@@ -26,6 +26,7 @@ for (i = start; i <= end; i++) {
 console.log(sum);
 */
 
+/*
 //Program to find the gratest number between two numbers
 
 const numOne = parseInt(prompt("Enter the first number: "));
@@ -37,4 +38,19 @@ if (numOne > numTwo) {
   console.log(numTwo + " is the greatest number");
 } else {
   console.log("Both values are equal");
+}
+*/
+
+//Program to find the greatest number between three numbers
+
+const num1 = parseInt(prompt("Enter the first number:"));
+const num2 = parseInt(prompt("Enter the second number:"));
+const num3 = parseInt(prompt("Enter the third number:"));
+
+if (num1 >= num2 && num1 >= num3) {
+  console.log(num1 + " is the greatest number");
+} else if (num2 >= num1 && num2 >= num3) {
+  console.log(num2 + " is the greatest number");
+} else if (num3 >= num1 && num3 >= num2) {
+  console.log(num3 + " is the greatest number");
 }
