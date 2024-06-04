@@ -41,6 +41,8 @@ if (numOne > numTwo) {
 }
 */
 
+/*
+
 //Program to find the greatest number between three numbers
 
 const num1 = parseInt(prompt("Enter the first number:"));
@@ -53,4 +55,17 @@ if (num1 >= num2 && num1 >= num3) {
   console.log(num2 + " is the greatest number");
 } else if (num3 >= num1 && num3 >= num2) {
   console.log(num3 + " is the greatest number");
+}
+
+*/
+
+//Program to find the leap year or not
+
+const year = parseInt(prompt("Enter the leap year:"));
+if (year % 400 == 0) {
+  console.log("Leap year");
+} else if (year % 4 == 0 && year % 100 != 0) {
+  console.log("It is leap year");
+} else {
+  console.log("Not a leap year");
 }
