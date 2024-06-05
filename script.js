@@ -59,6 +59,8 @@ if (num1 >= num2 && num1 >= num3) {
 
 */
 
+/*
+
 //Program to find the leap year or not
 
 const year = parseInt(prompt("Enter the leap year:"));
@@ -68,4 +70,37 @@ if (year % 400 == 0) {
   console.log("It is leap year");
 } else {
   console.log("Not a leap year");
+}
+*/
+
+//Program to find the prime number
+
+//take input from user
+const number = parseInt(prompt("Enter the number:"));
+let isPrime = true;
+
+if (number === 1) {
+  console.log("it is prime number");
+}
+
+//check if number is greater than 1
+else if (number > 1) {
+  //looping through 2 to number-1
+  for (let i = 2; i < number; i++) {
+    if (number % i == 0) {
+      isPrime = false;
+      break;
+    }
+  }
+
+  if (isPrime) {
+    console.log(`${number} is prime number`);
+  } else {
+    console.log(`${number} is not prime number.`);
+  }
+}
+
+// check if number is less than one
+else {
+  console.log("The number is not the prime number.");
 }
