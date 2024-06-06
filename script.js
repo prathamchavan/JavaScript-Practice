@@ -73,6 +73,8 @@ if (year % 400 == 0) {
 }
 */
 
+/*
+
 //Program to find the prime number
 
 //take input from user
@@ -80,7 +82,7 @@ const number = parseInt(prompt("Enter the number:"));
 let isPrime = true;
 
 if (number === 1) {
-  console.log("it is prime number");
+  console.log("it is neither prime number nor a composite number");
 }
 
 //check if number is greater than 1
@@ -103,4 +105,40 @@ else if (number > 1) {
 // check if number is less than one
 else {
   console.log("The number is not the prime number.");
+}
+
+*/
+
+//Program for prime number in a given range
+
+function isPrime(num) {
+  if (num <= 1) return false;
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+}
+
+function findPrimesInRange(start, end) {
+  let primes = [];
+  for (let i = start; i <= end; i++) {
+    if (isPrime(i)) {
+      primes.push(i);
+    }
+  }
+  return primes;
+}
+
+let start = parseInt(prompt("Enter the start of the range:"));
+let end = parseInt(prompt("Enter the end of the range:"));
+
+if (isNaN(start) || isNaN(end)) {
+  console.log("Please enter valid numbers.");
+} else if (start > end) {
+  console.log("Start should be less than or equal to End.");
+} else {
+  let primeNumbers = findPrimesInRange(start, end);
+  console.log(
+    `Prime numbers between ${start} and ${end} are: ${primeNumbers.join(", ")}`
+  );
 }
