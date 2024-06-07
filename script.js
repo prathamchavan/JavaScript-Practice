@@ -109,6 +109,8 @@ else {
 
 */
 
+/*
+
 //Program for prime number in a given range
 
 function isPrime(num) {
@@ -141,4 +143,34 @@ if (isNaN(start) || isNaN(end)) {
   console.log(
     `Prime numbers between ${start} and ${end} are: ${primeNumbers.join(", ")}`
   );
+}
+*/
+
+//program for the sum of the digits of the number
+
+//take userinput
+let userInput = prompt("Please enter the number:");
+
+// convert user input to a number
+let number = parseInt(userInput);
+
+//check if number is valid number
+if (!isNaN(number)) {
+  //calculate the sum of the digits
+  let result = sumOfDigit(number);
+
+  //Display the result
+  alert(`Sum of the digits of ${number} is ${result}`);
+} else {
+  //handle invalid input
+  alert("Invalid input! Please enter the a valid number");
+}
+//taking the user input
+function sumOfDigit() {
+  //conver the number into the string and split into individual characters
+  let digits = number.toString().split("");
+
+  //sum of the digits by converting each to a number and adding them up
+  let sum = digits.reduce((acc, digit) => acc + parseInt(digit), 0);
+  return sum;
 }
