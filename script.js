@@ -146,6 +146,7 @@ if (isNaN(start) || isNaN(end)) {
 }
 */
 
+/*
 //program for the sum of the digits of the number
 
 //take userinput
@@ -174,3 +175,22 @@ function sumOfDigit() {
   let sum = digits.reduce((acc, digit) => acc + parseInt(digit), 0);
   return sum;
 }
+
+*/
+
+//Program to find the reverse of the number
+
+function reverseNumber(number) {
+  let reversed = 0;
+  while (number != 0) {
+    let digit = number % 10;
+    reversed = reversed * 10 + digit;
+    number = Math.floor(number / 10);
+  }
+  return reversed;
+}
+
+// Take user input
+const inputNumber = parseInt(prompt("Enter a number to reverse:"));
+const reversedNumber = reverseNumber(inputNumber);
+console.log(`The reverse of ${inputNumber} is ${reversedNumber}`);
