@@ -178,6 +178,7 @@ function sumOfDigit() {
 
 */
 
+/*
 //Program to find the reverse of the number
 
 function reverseNumber(number) {
@@ -194,3 +195,6 @@ function reverseNumber(number) {
 const inputNumber = parseInt(prompt("Enter a number to reverse:"));
 const reversedNumber = reverseNumber(inputNumber);
 console.log(`The reverse of ${inputNumber} is ${reversedNumber}`);
+*/
+
+//no work today
