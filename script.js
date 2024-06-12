@@ -1,200 +1,25 @@
+"use strict";
+
 /*
-// program for calculating sum of first N natural numbers
-
-const num = Number(prompt("Enter a number "));
-let sum = 0;
-for (let i = 0; i <= num; i++) {
-  sum = sum + i;
-}
-
-console.log("The sum of first natural numbers until " + num + " is:" + sum);
-
+Given an array of forecasted maximum temperatures, the thermometer displays a 
+string with the given temperatures. Example: [17, 21, 23] will print "... 17ºC in 1 
+days ... 21ºC in 2 days ... 23ºC in 3 days ..."
+Your tasks:
+1. Create a function 'printForecast' which takes in an array 'arr' and logs a 
+string like the above to the console. Try it with both test datasets.
+2. Use the problem-solving framework: Understand the problem and break it up 
+into sub-problems!
+Test data:
+§ Data 1: [17, 21, 23]
+§ Data 2: [12, 5, -5, 0, 4]
 */
 
-/*
-// Program for sum of the numbers in a given range
+const temprature = [12, 5, -5, 0, 4];
 
-const start = parseInt(prompt("Enter the starting number: "));
-const end = parseInt(prompt("Enter the last number: "));
-
-let sum = 0;
-
-for (i = start; i <= end; i++) {
-  sum = sum + i;
-}
-
-console.log(sum);
-*/
-
-/*
-//Program to find the gratest number between two numbers
-
-const numOne = parseInt(prompt("Enter the first number: "));
-const numTwo = parseInt(prompt("Enter the second number: "));
-
-if (numOne > numTwo) {
-  console.log(numOne + " is greatest number");
-} else if (numTwo > numOne) {
-  console.log(numTwo + " is the greatest number");
-} else {
-  console.log("Both values are equal");
-}
-*/
-
-/*
-
-//Program to find the greatest number between three numbers
-
-const num1 = parseInt(prompt("Enter the first number:"));
-const num2 = parseInt(prompt("Enter the second number:"));
-const num3 = parseInt(prompt("Enter the third number:"));
-
-if (num1 >= num2 && num1 >= num3) {
-  console.log(num1 + " is the greatest number");
-} else if (num2 >= num1 && num2 >= num3) {
-  console.log(num2 + " is the greatest number");
-} else if (num3 >= num1 && num3 >= num2) {
-  console.log(num3 + " is the greatest number");
-}
-
-*/
-
-/*
-
-//Program to find the leap year or not
-
-const year = parseInt(prompt("Enter the leap year:"));
-if (year % 400 == 0) {
-  console.log("Leap year");
-} else if (year % 4 == 0 && year % 100 != 0) {
-  console.log("It is leap year");
-} else {
-  console.log("Not a leap year");
-}
-*/
-
-/*
-
-//Program to find the prime number
-
-//take input from user
-const number = parseInt(prompt("Enter the number:"));
-let isPrime = true;
-
-if (number === 1) {
-  console.log("it is neither prime number nor a composite number");
-}
-
-//check if number is greater than 1
-else if (number > 1) {
-  //looping through 2 to number-1
-  for (let i = 2; i < number; i++) {
-    if (number % i == 0) {
-      isPrime = false;
-      break;
-    }
-  }
-
-  if (isPrime) {
-    console.log(`${number} is prime number`);
-  } else {
-    console.log(`${number} is not prime number.`);
+function printForecast(temperatures) {
+  for (let i = 0; i < temprature.length; i++) {
+    console.log(temperatures[i] + "ºC in" + (i + 1) + " days ...");
   }
 }
 
-// check if number is less than one
-else {
-  console.log("The number is not the prime number.");
-}
-
-*/
-
-/*
-
-//Program for prime number in a given range
-
-function isPrime(num) {
-  if (num <= 1) return false;
-  for (let i = 2; i < num; i++) {
-    if (num % i === 0) return false;
-  }
-  return true;
-}
-
-function findPrimesInRange(start, end) {
-  let primes = [];
-  for (let i = start; i <= end; i++) {
-    if (isPrime(i)) {
-      primes.push(i);
-    }
-  }
-  return primes;
-}
-
-let start = parseInt(prompt("Enter the start of the range:"));
-let end = parseInt(prompt("Enter the end of the range:"));
-
-if (isNaN(start) || isNaN(end)) {
-  console.log("Please enter valid numbers.");
-} else if (start > end) {
-  console.log("Start should be less than or equal to End.");
-} else {
-  let primeNumbers = findPrimesInRange(start, end);
-  console.log(
-    `Prime numbers between ${start} and ${end} are: ${primeNumbers.join(", ")}`
-  );
-}
-*/
-
-/*
-//program for the sum of the digits of the number
-
-//take userinput
-let userInput = prompt("Please enter the number:");
-
-// convert user input to a number
-let number = parseInt(userInput);
-
-//check if number is valid number
-if (!isNaN(number)) {
-  //calculate the sum of the digits
-  let result = sumOfDigit(number);
-
-  //Display the result
-  alert(`Sum of the digits of ${number} is ${result}`);
-} else {
-  //handle invalid input
-  alert("Invalid input! Please enter the a valid number");
-}
-//taking the user input
-function sumOfDigit() {
-  //conver the number into the string and split into individual characters
-  let digits = number.toString().split("");
-
-  //sum of the digits by converting each to a number and adding them up
-  let sum = digits.reduce((acc, digit) => acc + parseInt(digit), 0);
-  return sum;
-}
-
-*/
-
-/*
-//Program to find the reverse of the number
-
-function reverseNumber(number) {
-  let reversed = 0;
-  while (number != 0) {
-    let digit = number % 10;
-    reversed = reversed * 10 + digit;
-    number = Math.floor(number / 10);
-  }
-  return reversed;
-}
-
-// Take user input
-const inputNumber = parseInt(prompt("Enter a number to reverse:"));
-const reversedNumber = reverseNumber(inputNumber);
-console.log(`The reverse of ${inputNumber} is ${reversedNumber}`);
-*/
-
-//no work today
+console.log(printForecast(temprature));
